@@ -1,0 +1,30 @@
+nav{
+    position: fixed;
+    height: 10px;
+}
+
+.navbar{
+    background-color: aqua;
+    text-align: center;
+}
+
+nav a{
+    text-decoration:  none;
+    margin-left: 90px;
+}
+
+p:nth-child(1){
+    position: relative;
+    background-color: antiquewhite;
+}
+p:nth-child(2){
+
+    position: fixed;
+    background-color: aquamarine;
+}
+p:nth-child(3){
+    top: 30px;
+    position: absolute;
+    background-color: blueviolet;
+}
+
