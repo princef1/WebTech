@@ -7,9 +7,18 @@
 
 body {
   font-family: 'poppins', sans-serif;
-  /* background-color: #dfe7f1; */
   background-color: white;
   overflow-x: hidden;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a:focus {
+  outline: 2px solid #659ea1;
+  outline-offset: 3px;
 }
 
 nav{
@@ -33,7 +42,7 @@ nav img{
 .right{
   display: flex;
   gap: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-bottom: 12px;
 }
 
@@ -48,7 +57,7 @@ nav img{
   transition: background-color .3s ease-in;
 }
 
-.right a:hover{
+.extra a:hover, .right a:hover{
   background-color: #dfe7f1;
 }
 
@@ -67,21 +76,23 @@ nav img{
 }
 
 .alonso img{
-  position: absolute;
+  position: fixed;
   width: 550px;
   height: 450px;
   top: 125px;
   left: -250px;
+  pointer-events: none;
   transform: rotate(25deg);
 }
 
 .crane img{
-  position: absolute;
-  width: 460px;
-  height: 560px;
-  right: -175px;
-  transform: rotate(-15deg);
-  bottom: -180px;
+  position: fixed;
+  width: 360px;
+  height: 460px;
+  right: -125px;
+  transform: rotate(-13deg);
+  bottom: -31px;
+  pointer-events: none;
 }
 
 table {
@@ -135,13 +146,89 @@ tr:nth-child(even) {
 }
 
 .scalablerow{
-  transition: transform .3s ease, box-shadow .3 ease;
+  transition: transform .6s ease, box-shadow .3s ease;
   box-shadow: 0 0 0 rgba(0,0,0,0);
-  display: table-row;
 }
 
 .scalablerow:hover{
   transform: scale(1.025);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   cursor: pointer;
+}
+
+footer{
+  border-top: 1px solid  grey;
+  background: linear-gradient(60deg, white 48%, 	#FF1E00 52%);
+  text-align: center;
+  height: 120px;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  align-items: center;
+}
+
+.logo{
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+}
+.logo img{
+  width: 90px;
+  height: 100px;
+  margin-right: 5px;
+}
+
+.socials{
+  border-radius: 8px;
+  display: flex;
+  gap: 25px;
+  margin-right: 130px;
+}
+
+.socials img{
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  transition: transform .3s ease-in;
+}
+
+.socials img:hover{
+  transform: scale(1.35);
+}
+
+.cr{
+  margin-top: 90px;
+  margin-right: 11px;
+}
+
+.extra{
+  margin-right: 100px;
+  display: flex;
+  gap: 20px;
+}
+
+.extra a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 30px;
+  padding: 4px 9px;
+  border-radius: 12px;
+  transition: background-color .3s ease-in;
+}
+
+@media (max-width: 900px) {
+  table {
+    width: 95%;
+  }
+
+  .alonso img,
+  .crane img {
+    display: none;
+  }
 }
